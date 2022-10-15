@@ -1,0 +1,166 @@
+.dialog--toast {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.16);
+    border: none;
+    position: fixed;
+}
+
+.toast--top {
+    top: 24px;
+    bottom: auto;
+}
+
+.toast--bottom {
+    top: auto;
+    bottom: 24px;
+}
+
+.toast--left {
+    left: 24px;
+    right: auto;
+}
+
+.toast--right {
+    left: auto;
+    right: 24px;
+}
+
+/* Show/hide animations for left placements */
+@keyframes show-toast-left{
+    from {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes hide-toast-left{
+    from {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+}
+
+.dialog--toast[open][placement="top-left"] {
+    animation: show-toast-left 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dialog--toast[open][placement="top-left"].dialog--closing {
+    animation: hide-toast-left 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.dialog--toast[open][placement="bottom-left"] {
+    animation: show-toast-left 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dialog--toast[open][placement="bottom-left"].dialog--closing {
+    animation: hide-toast-left 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Show/hide animations for right placements */
+@keyframes show-toast-right{
+    from {
+        opacity: 0;
+        transform: translateX(30%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+  
+@keyframes hide-toast-right{
+    from {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(30%);
+    }
+}
+
+.dialog--toast[open][placement="top-right"] {
+    animation: show-toast-right 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dialog--toast[open][placement="top-right"].dialog--closing {
+    animation: hide-toast-right 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dialog--toast[open][placement="bottom-right"] {
+    animation: show-toast-right 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dialog--toast[open][placement="bottom-right"].dialog--closing {
+    animation: hide-toast-right 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Show/hide animations for top-middle placement */
+@keyframes show-toast-middle-top{
+    from {
+      opacity: 0;
+      transform: translateY(-30%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+  
+@keyframes hide-toast-middle-top{
+    from {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-30%);
+    }
+}
+
+.dialog--toast[open][placement="top-middle"] {
+    animation: show-toast-middle-top 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dialog--toast[open][placement="top-middle"].dialog--closing {
+    animation: hide-toast-middle-top 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Show/hide animations for bottom-middle placement */
+@keyframes show-toast-middle-bottom{
+    from {
+      opacity: 0;
+      transform: translateY(30%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+  
+@keyframes hide-toast-middle-bottom{
+    from {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(30%);
+    }
+}
+
+.dialog--toast[open][placement="bottom-middle"] {
+    animation: show-toast-middle-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.dialog--toast[open][placement="bottom-middle"].dialog--closing {
+    animation: hide-toast-middle-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
